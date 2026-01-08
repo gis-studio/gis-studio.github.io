@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GIS | Informational Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="GIS is an informational website sharing guides and educational content. Google AdSense ready structure.">
+<meta name="author" content="GIS">
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#0c0c0c;
+  color:#ffffff;
+}
+header{
+  background:#b30000;
+  padding:22px;
+  text-align:center;
+}
+header h1{margin:0}
+header p{opacity:.9}
+
+button{
+  cursor:pointer;
+}
+
+.primary{
+  margin-top:15px;
+  padding:12px 22px;
+  background:#0a8a0a;
+  border:none;
+  color:#fff;
+  font-size:16px;
+  border-radius:8px;
+}
+
+nav{
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  background:#1a1a1a;
+  padding:10px 0;
+}
+nav button{
+  background:#006600;
+  border:none;
+  color:#fff;
+  padding:8px 14px;
+  margin:4px;
+  border-radius:6px;
+}
+
+section{
+  display:none;
+  padding:20px;
+}
+section.active{display:block}
+
+.card{
+  background:#1f1f1f;
+  padding:18px;
+  margin-bottom:16px;
+  border-radius:10px;
+}
+
+input{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:6px;
+  border:none;
+}
+
+.action{
+  width:100%;
+  background:#008000;
+  color:#fff;
+  padding:10px;
+  border:none;
+  border-radius:6px;
+}
+
+footer{
+  background:#111;
+  text-align:center;
+  font-size:13px;
+  padding:16px;
+  opacity:.8;
+}
+footer a{
+  color:#00ff88;
+  margin:0 6px;
+  cursor:pointer;
+}
+</style>
+
+<script>
+function show(id){
+  document.querySelectorAll("section").forEach(s=>{
+    s.classList.remove("active");
+  });
+  document.getElementById(id).classList.add("active");
+  window.scrollTo(0,0);
+}
+
+function getStarted(){
+  show("signup");
+}
+</script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h1>GIS</h1>
+  <p>Knowledge • Guides • Information</p>
+  <button class="primary" onclick="getStarted()">Get Started</button>
+</header>
+
+<!-- NAV -->
+<nav>
+  <button onclick="show('home')">Home</button>
+  <button onclick="show('signup')">Sign Up / Login</button>
+  <button onclick="show('contact')">Contact</button>
+  <button onclick="show('about')">About</button>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="active">
+  <div class="card">
+    <h3>Welcome to GIS</h3>
+    <p>
+      GIS is an informational website that provides guides, tips, and educational content.
+      This website is built according to Google AdSense policies.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>How GIS Works</h3>
+    <p>
+      GIS generates revenue through online advertisements such as Google AdSense.
+      No investments, no fake earning promises.
+    </p>
+  </div>
+</section>
+
+<!-- SIGNUP / LOGIN -->
+<section id="signup">
+  <div class="card">
+    <h2>Create Account</h2>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email Address">
+    <input type="password" placeholder="Password">
+    <button class="action" onclick="alert('Demo signup only')">Sign Up</button>
+  </div>
+
+  <div class="card">
+    <h2>Login</h2>
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button class="action" onclick="alert('Demo login only')">Login</button>
+  </div>
+
+  <div class="card">
+    <p><strong>Note:</strong> This is a demo (frontend only). No real accounts are created.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="card">
+    <h3>About Us</h3>
+    <p>
+      GIS is created to share authentic information and educational content.
+      Our goal is to build a clean, useful, and AdSense-compliant platform.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="card">
+    <h3>Contact Us</h3>
+    <p><strong>Email:</strong> aivibesstudio009@gmail.com</p>
+    <p><strong>Phone / WhatsApp:</strong> 03077857478</p>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section id="privacy">
+  <div class="card">
+    <h3>Privacy Policy</h3>
+    <p>
+      We respect user privacy. No personal data is sold or misused.
+      Cookies may be used for analytics and advertising purposes.
+    </p>
+  </div>
+</section>
+
+<!-- TERMS -->
+<section id="terms">
+  <div class="card">
+    <h3>Terms & Conditions</h3>
+    <p>
+      This website provides informational content only.
+      Users agree to use the website responsibly.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a onclick="show('privacy')">Privacy Policy</a> |
+  <a onclick="show('terms')">Terms & Conditions</a>
+  <br><br>
+  © 2026 GIS | All Rights Reserved
+</footer>
+
+</body>
+  </html>
